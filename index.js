@@ -33,7 +33,7 @@ class SortedList {
   }
 
   sum() {
-    return this.items.reduce((x, acc) => x + acc, 0);
+    return this.items.reduce((acc, x) => x + acc, 0);
   }
 
   avg() {
@@ -41,6 +41,6 @@ class SortedList {
       throw new Error("EmptySortedList");
     }
     return this.items.reduce((a, acc) => a + acc) / this.items.length;
-}
+  }
 }
 module.exports = SortedList;
